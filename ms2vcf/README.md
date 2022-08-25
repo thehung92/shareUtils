@@ -16,12 +16,13 @@ you can download this script from github with
 
 ```shell
 git clone https://github.com/thehung92/shareUtils.git
-cd shareUtils/ms2
+cd shareUtils/ms2vcf
 ```
 
-This script is written in R 4.1.2 with the following required library that you need to install before running
+This script is written in R 4.1.2 with the following required library that you need to install in R before running
 
 ```r
+# R console
 packages <- c("tidyverse",
               "data.table",
               "argparse")
@@ -30,9 +31,10 @@ install.packages(packages)
 ```
 
 
-you must have 'tabix' and 'bgzip' installed on your system and available in your $PATH. Meaning you can call them directly with:
+you must have 'tabix' and 'bgzip' installed on your system and available in your $PATH. Meaning you can call them directly in the terminal with:
 
 ```shell
+# sh terminal
 tabix --help
 bgzip --help
 ```
