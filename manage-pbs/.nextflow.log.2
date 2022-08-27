@@ -1,0 +1,58 @@
+Aug-25 16:58:26.237 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -process.echo --option 2
+Aug-25 16:58:26.415 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Aug-25 16:58:26.642 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-25 16:58:26.659 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [maniac_hamilton] DSL2 - revision: 2ab5129fd3
+Aug-25 16:58:26.691 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/Users/hung/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Aug-25 16:58:26.695 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-25 16:58:26.716 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-25 16:58:26.717 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-25 16:58:26.721 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-25 16:58:26.748 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-25 16:58:26.827 [main] DEBUG nextflow.Session - Session uuid: 8dbe7da3-ef17-4eba-89f6-ad66fbe51cc5
+Aug-25 16:58:26.827 [main] DEBUG nextflow.Session - Run name: maniac_hamilton
+Aug-25 16:58:26.833 [main] DEBUG nextflow.Session - Executor pool size: 10
+Aug-25 16:58:26.901 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC (16-07-2022 00:09 SGST)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.9.1+1-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 48005@ase-mac-hung.local [127.0.0.1]
+  CPUs: 10 - Mem: 64 GB (3.5 GB) - Swap: 0 (0)
+Aug-25 16:58:26.933 [main] DEBUG nextflow.Session - Work-dir: /Users/hung/Data/side-project/shareUtils/manage-pbs/work [Mac OS X]
+Aug-25 16:58:26.933 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/hung/Data/side-project/shareUtils/manage-pbs/bin
+Aug-25 16:58:26.946 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-25 16:58:26.979 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-25 16:58:27.019 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-25 16:58:27.040 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Aug-25 16:58:27.104 [main] DEBUG nextflow.Session - Session start invoked
+Aug-25 16:58:28.557 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-25 16:58:28.593 [main] INFO  nextflow.script.BaseScript - 
+==== ====
+this program will submit job to pbs.
+add condition statement to the script
+==== ====
+
+Aug-25 16:58:28.931 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-25 16:58:28.931 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-25 16:58:28.942 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-25 16:58:28.950 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=64 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Aug-25 16:58:29.289 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-25 16:58:29.289 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-25 16:58:29.298 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: uppercase, base1
+Aug-25 16:58:29.300 [main] DEBUG nextflow.Session - Ignite dataflow network (3)
+Aug-25 16:58:29.333 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > base1
+Aug-25 16:58:29.340 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > uppercase
+Aug-25 16:58:29.343 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-25 16:58:29.350 [main] DEBUG nextflow.Session - Session await
+Aug-25 16:58:30.065 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-25 16:58:30.112 [Task submitter] INFO  nextflow.Session - [3c/c25065] Submitted process > base1 (1)
+Aug-25 16:58:30.617 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: base1 (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/hung/Data/side-project/shareUtils/manage-pbs/work/3c/c2506562a15d7872912ac80d439e6f]
+Aug-25 16:58:30.713 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-25 16:58:30.717 [Task submitter] INFO  nextflow.Session - [67/113d68] Submitted process > uppercase (1)
+Aug-25 16:58:30.854 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: uppercase (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/hung/Data/side-project/shareUtils/manage-pbs/work/67/113d68a771ce0e18bacc4e96f0a5db]
+Aug-25 16:58:30.860 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-25 16:58:30.867 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-25 16:58:30.902 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=463ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Aug-25 16:58:31.089 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-25 16:58:31.134 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,21 @@
+2022-08-25 14:30:59	-	magical_poisson	-	e2892fde2ce572973c44f15b71c0947c	75d2b3b5-d084-4e46-93df-8bbac51564be	nextflow run process_1.nf
+2022-08-25 14:33:04	5.3s	cranky_pauling	ERR	288356e46074fdeeeec29d14272ec887	786fdd84-9f9d-4c8c-8f7c-a1e55c1c54ea	nextflow run process_1.nf
+2022-08-25 15:39:19	-	compassionate_ardinghelli	-	df958d95a9bdd4cb5bfe76da177e00fa	8197af90-a0bb-4446-9d14-4e4816303c8d	nextflow run process_1.nf
+2022-08-25 15:41:08	-	angry_stone	-	99fff934f6162ba30eb68d46aa6bc496	5aa93ecd-0554-4fe2-8008-527c92a06c19	nextflow run process_1.nf
+2022-08-25 16:22:21	-	romantic_legentil	-	5eafbbf735eba7753e37f5485bd89e3f	5a7c40fa-5218-41d7-a959-b0eb8b5bef43	nextflow run main.nf
+2022-08-25 16:24:33	-	astonishing_hopper	-	fbd296fb47cc3a6ad0160ae259d1fce6	19fc122f-f22b-4b25-846b-b41c95a8e258	nextflow run main.nf
+2022-08-25 16:25:32	-	amazing_galileo	-	803fd3902a60e606a4fcaf82f2e657a6	93d92fa3-3c3c-41ba-a79e-e883fa2f2c92	nextflow run main.nf
+2022-08-25 16:26:06	3.5s	maniac_meitner	OK	95853af8ef0af1957abb89fc15286fc2	231c11d4-199e-46a1-80cd-c533d324a4f4	nextflow run main.nf
+2022-08-25 16:27:00	4s	pedantic_lorenz	OK	db07776dbace2c94ff30792ccf56ef08	52305a85-d672-459f-994b-12f02f6949eb	nextflow run main.nf
+2022-08-25 16:28:11	3.6s	dreamy_meucci	OK	db07776dbace2c94ff30792ccf56ef08	99780453-992e-4f99-823a-6a8ea8035ebc	nextflow run main.nf -process.echo
+2022-08-25 16:31:41	4.5s	reverent_varahamihira	OK	ac4f7e706c37c642d2a7fbc5786ec043	31ab14dd-9d11-4ebf-9177-8db67d7ca30d	nextflow run main.nf -process.echo
+2022-08-25 16:32:30	4.2s	astonishing_mestorf	OK	9d6be20a602328e4d9990907f18822f2	f7c97535-de57-4a47-a0fb-d9393ad06b7f	nextflow run main.nf
+2022-08-25 16:37:33	3.8s	serene_brown	OK	f424d4739b53bd6af8413a1a829a5bd4	f96adec4-68b5-4197-8aea-29c51b0d8958	nextflow run main.nf
+2022-08-25 16:38:24	-	extravagant_lamarr	-	1beb587a7c5774770b1bb5afa6ff2409	6fc39e26-f6f7-4b1f-a7cc-0c5d3887b99b	nextflow run main.nf --help
+2022-08-25 16:42:57	3.9s	desperate_goldberg	ERR	ca4d5dc172042aebba2fd4dd3688f7ee	57055077-f279-42bc-b13b-b32a8228472c	nextflow run main.nf -process.echo --option 1
+2022-08-25 16:43:58	4.1s	awesome_aryabhata	OK	796a5221a532a60adca4166bc34f6fc8	e557da46-3b83-4342-bfcf-42f7fe7cbcb2	nextflow run main.nf -process.echo --option 1
+2022-08-25 16:45:23	4.1s	astonishing_mahavira	OK	796a5221a532a60adca4166bc34f6fc8	9e41aa86-d769-4adc-a437-110df65a5907	nextflow run main.nf -process.echo
+2022-08-25 16:58:02	-	fabulous_curran	-	cd3989f7bdfea46565b70814fd4a1da3	e81f7c34-7c37-4aea-9341-2a2cc76c8a61	nextflow run main.nf -process.echo --option 2
+2022-08-25 16:58:26	5.1s	maniac_hamilton	OK	2ab5129fd377b1ca8bcff11c5d8c23c8	8dbe7da3-ef17-4eba-89f6-ad66fbe51cc5	nextflow run main.nf -process.echo --option 2
+2022-08-25 16:59:27	4s	naughty_crick	OK	e1ad8aaa9e9b9494c95dc9e4b61fc31c	dbd2d9e6-4fff-4f52-b6f1-1c7fdf753d75	nextflow run main.nf -process.echo --option 2
+2022-08-25 17:07:39	4.4s	suspicious_bhaskara	OK	99b799ddfaf3c26d6138c2df2c8e25dc	159698a3-07ca-45e4-a01b-347ad4e9b04d	nextflow run main.nf -process.echo --option 2

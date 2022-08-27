@@ -1,0 +1,78 @@
+Aug-25 16:58:01.640 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -process.echo --option 2
+Aug-25 16:58:01.797 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Aug-25 16:58:02.025 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-25 16:58:02.042 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [fabulous_curran] DSL2 - revision: cd3989f7bd
+Aug-25 16:58:02.072 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/Users/hung/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Aug-25 16:58:02.076 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-25 16:58:02.139 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-25 16:58:02.139 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-25 16:58:02.143 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-25 16:58:02.169 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-25 16:58:02.252 [main] DEBUG nextflow.Session - Session uuid: e81f7c34-7c37-4aea-9341-2a2cc76c8a61
+Aug-25 16:58:02.252 [main] DEBUG nextflow.Session - Run name: fabulous_curran
+Aug-25 16:58:02.260 [main] DEBUG nextflow.Session - Executor pool size: 10
+Aug-25 16:58:02.332 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC (16-07-2022 00:09 SGST)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.9.1+1-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 47863@ase-mac-hung.local [127.0.0.1]
+  CPUs: 10 - Mem: 64 GB (3.5 GB) - Swap: 0 (0)
+Aug-25 16:58:02.368 [main] DEBUG nextflow.Session - Work-dir: /Users/hung/Data/side-project/shareUtils/manage-pbs/work [Mac OS X]
+Aug-25 16:58:02.368 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/hung/Data/side-project/shareUtils/manage-pbs/bin
+Aug-25 16:58:02.383 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-25 16:58:02.410 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-25 16:58:02.446 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-25 16:58:02.470 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Aug-25 16:58:02.539 [main] DEBUG nextflow.Session - Session start invoked
+Aug-25 16:58:03.995 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-25 16:58:04.037 [main] INFO  nextflow.script.BaseScript - 
+==== ====
+this program will submit job to pbs.
+add condition statement to the script
+==== ====
+
+Aug-25 16:58:04.360 [main] DEBUG nextflow.Session - Session aborted -- Cause: Process `base1` declares 1 input channel but 0 were specified
+Aug-25 16:58:04.416 [main] ERROR nextflow.cli.Launcher - Process `base1` declares 1 input channel but 0 were specified
+nextflow.exception.ScriptRuntimeException: Process `base1` declares 1 input channel but 0 were specified
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:175)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
+	at nextflow.extension.ChannelEx.or(ChannelEx.groovy:203)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.metaclass.ReflectionMetaMethod.invoke(ReflectionMetaMethod.java:54)
+	at org.codehaus.groovy.runtime.metaclass.NewInstanceMetaMethod.invoke(NewInstanceMetaMethod.java:54)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoMetaMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:226)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:73)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_5f2ed9f4$_runScript_closure3$_closure6.doCall(Script_5f2ed9f4:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:208)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:217)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:220)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:337)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
