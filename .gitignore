@@ -4,5 +4,12 @@
 **/work
 .Rproj.user
 # exclude Rhistory in development
-**/.Rhistory
+**/*.Rproj
 **/.Rproj.user
+**/.Rhistory
+**/.Rdata
+# ignore system file on macOS
+**/.DS_Store
+**/._*
+# make exception for all md file
+!**/README.md
