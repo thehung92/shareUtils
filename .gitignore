@@ -1,0 +1,8 @@
+# exclude nextflow history
+**/.nextflow
+**/.nextflow.*
+**/work
+.Rproj.user
+# exclude Rhistory in development
+**/.Rhistory
+**/.Rproj.user
