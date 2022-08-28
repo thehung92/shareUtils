@@ -1,5 +1,11 @@
 # manage pbs submission of script through nextflow
 
+## add gititgnore to excluded all nextflow history in the repos
+
+```shell
+cat .gitignore
+```
+
 ## nextflow version
 
 ```shell
