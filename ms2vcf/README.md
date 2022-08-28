@@ -56,14 +56,14 @@ bedtools --help
 Rscript ms2vcf.R --help
 
 # usage: ms2vcf.R [-h] [-f [FA]] [-r chr:beg-end] [-p [PREFIX]] [file ...]
-
+# 
 # convert output from ms program with even number of haplotypes to vcf genotype.
 # Assuming 2 consecutive haplotype belong to 1 sample
-
+# 
 # positional arguments:
 #   file                  input file path or read input from stdin
-
-# optional arguments:
+# 
+# options:
 #   -h, --help            show this help message and exit
 #   -f [FA], --fasta [FA]
 #                         reference genome file path [fasta]
@@ -71,7 +71,7 @@ Rscript ms2vcf.R --help
 #                         region to simulate, default to "1:2E7-3E7". chr-beg-
 #                         end is parsed with parse_number
 #   -p [PREFIX], --prefix [PREFIX]
-#                         output file name prefix, default to "sim_pop"
+#                         output file name prefix, default to "stdout"
 
 # an example of converting the ms sequence to vcf region: chromosome 2, start 30 000 000, end 40 000 000. and write vcf.gz file with prefix my_sim_pop in example folder
 Rscript ms2vcf.R -r 2:3E7-4E7 -p example/my_sim_pop example/output.ms
