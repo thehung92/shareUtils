@@ -31,7 +31,7 @@ install.packages(packages)
 ```
 
 
-you must have 'tabix' and 'bgzip' installed on your system and available in your $PATH. Meaning you can call them directly in the terminal with:
+If you want to write vcf file with prefix, you must have 'tabix' and 'bgzip' installed on your system and available in your $PATH. Meaning you can call them directly in the terminal with:
 
 ```shell
 # sh terminal
