@@ -19,10 +19,10 @@ parser$add_argument("-f", "--fasta", nargs="?", metavar="FA",
                     help="reference genome file path [fasta]")
 parser$add_argument("-r", "--region", nargs=1, metavar="chr:beg-end",default="1:2E7-3E7",
                     help="region to simulate, default to \"%(default)s\". chr-beg-end is parsed with parse_number")
-parser$add_argument("-p", "--prefix", nargs="?", default="sim_pop",
-                    help="output file name prefix, default to \"%(default)s\"")
+parser$add_argument("-p", "--prefix", nargs="?",
+                    help="output file name prefix, default to \"stdout\"")
 # create args in the global env for use with many function
-# debug: args <- parser$parse_args(c("--region", "2:3E7-4E7", "-p", "example/my_sim_pop", "example/output.ms"))
+# debug: args <- parser$parse_args(c("--region", "2:3E7-4E7", "example/output.ms"))
 args <- parser$parse_args()
 fasta <- args$fasta
 fai <- paste0(args$fasta, ".fai")
@@ -81,14 +81,23 @@ main <- function() {
       stop("reference file or fai file do not exist")
     }
   }
-  # write to current working dir
-  for (i in 1:length(ls.df.vcf2)) {
-    df.vcf <- ls.df.vcf2[[i]]
-    prefix <- paste(prefix, i, sep="_")
-    write_vcf(df.vcf, prefix)
+  # write to std out or write file with prefix
+  if (length(prefix)==0) {
+    # write to stdout if there is only 1 vcf
+    if (length(ls.df.vcf2)==1) {
+      write_vcf(ls.df.vcf[[1]], prefix=stdout())
+    } else {
+      stop("there are multiple repetition in ms output. Should define a prefix to write to files")
+    }
+  } else {
+    for (i in 1:length(ls.df.vcf2)) {
+      df.vcf <- ls.df.vcf2[[i]]
+      prefix <- paste(prefix, i, sep="_")
+      write_vcf(df.vcf, prefix)
+    }
+    cat(paste("vcf file written with prefix:", prefix), file=stderr())
   }
-  # report
-  cat(paste("vcf file written with prefix:", prefix), file=stderr())
+  # report none
 }
 #### sub-process: read geno matrix from the ms output #####
 read_geno_matrix <- function(filename) {
@@ -178,15 +187,22 @@ extract_ref <- function(df.vcf) {
 }
 #### write vcf ####
 write_vcf <- function(df.vcf, prefix) {
-  # extract genotype matrix and write vcf with header # add check if 
-  OUTPUT=paste0(prefix, ".vcf")
   header <- c('##fileformat=VCFv4.2',
               '##reference=human_g1k_v37_decoy.fasta',
               '##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">')
-  write_lines(header, OUTPUT)
-  fwrite(df.vcf, OUTPUT, append = TRUE, sep="\t", quote=FALSE, col.names = TRUE)
-  system(paste("bgzip", OUTPUT))
-  system(paste0("tabix -p vcf ", OUTPUT, ".gz"))
+  # get connection
+  if (any(class(prefix) == 'terminal')) {
+    OUTPUT=prefix
+    write_lines(header, OUTPUT)
+    try(write_delim(df.vcf, OUTPUT, delim="\t", append=FALSE, col_names = TRUE, quote="none"), silent=TRUE)
+  } else {
+    OUTPUT=paste0(prefix, ".vcf")
+    # extract genotype matrix and write vcf with header # add check if
+    write_lines(header, OUTPUT)
+    fwrite(df.vcf, OUTPUT, append = TRUE, sep="\t", quote=FALSE, col.names = TRUE)
+    system(paste("bgzip", OUTPUT))
+    system(paste0("tabix -p vcf ", OUTPUT, ".gz"))
+  }
 }
 #### debug ####
 

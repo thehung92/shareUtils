@@ -75,5 +75,9 @@ Rscript ms2vcf.R --help
 
 # an example of converting the ms sequence to vcf region: chromosome 2, start 30 000 000, end 40 000 000. and write vcf.gz file with prefix my_sim_pop in example folder
 Rscript ms2vcf.R -r 2:3E7-4E7 -p example/my_sim_pop example/output.ms
+# an example of converting the ms sequence to vcf region: chromosome 2, start 30 000 000, end 40 000 000 and write to stdout. Then pipe std out into other bash function
+Rscript ms2vcf.R -r 2:3E7-4E7 example/output.ms | head -2
+
+
 
 ```
