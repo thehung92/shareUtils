@@ -1,0 +1,17 @@
+# ignore OS file
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+# nextflow history
+.nextflow/
+.nextflow*
+work
+# R development
+.Rproj.user
+**/*.Rproj
+**/.Rproj.user
+**/.Rhistory
+**/.Rdata
+# make exception for all md file
+!**/README.md

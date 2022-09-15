@@ -15,5 +15,11 @@ nextflow -version
 ## manage process with nextflow
 
 ```shell
-nextflow run main.nf -process.echo --option 2
+nextflow run main.nf -c conf/nscc-aspire1-test.conf -process.echo --option 2
+```
+
+## add description and workflow
+
+```shell
+
 ```

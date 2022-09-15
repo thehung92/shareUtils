@@ -1,0 +1,11 @@
+# ignore OS file
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# nextflow history
+.nextflow/
+.nextflow*
+work

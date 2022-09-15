@@ -3,9 +3,8 @@ nextflow.enable.dsl=2
 // write description
 println """
 ==== ====
-this program will submit job to pbs.
-add condition statement to the script.
-collect output in a folder
+This program intend to submit jobs to pbs. Add condition statement to the script. Collect output in a folder.
+Read metadata.list as input
 ==== ====
 """
 
@@ -36,7 +35,7 @@ if (params.help) {
 }
 
 // process definition
-process base1 {
+process extractPath {
   input:
     path input
   output:
@@ -66,22 +65,13 @@ process uppercase {
     """
 }
 
-process multiInput {
-  input:
-    val x
-    val y
-  script:
-    """
-    echo $x and $y
-    """
-}
 
 // declare channel and run workflow
 
 input_ch = Channel.fromPath( 'data/script.pbs' )
 
 workflow {
-   base1(input_ch) | uppercase
+   extractPath(input_ch) | uppercase
 }
 
 /*
