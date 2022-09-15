@@ -11,7 +11,7 @@ various programs that I write for my genomic analysis
 #
 git remote add server nscc:/home/users/ntu/nguyentr/Tools/shareUtils
 #
-git add . && git commit -m 'fast sync' && git push --set-upstream server master
+git add . && git commit -m 'fast sync' && git push --set-upstream server main
 
 # server
 git config receive.denyCurrentBranch ignore
